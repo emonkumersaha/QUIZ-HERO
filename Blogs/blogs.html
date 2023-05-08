@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #000000;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f7da;
+        }
+    </style>
+</head>
+
+<body class="md:mx-20 md:my-12 mx-4 my-5">
+    <section>
+        <h1 class="text-center md:text-4xl text-3xl font-semibold">Wellcome to blog page</h1>
+        <button class="bg-green-600 font-medium mt-8 text-sm px-5 py-1 rounded text-white"><a class=""
+                href="../index.html">Back</a></button>
+    </section>
+
+
+    <!-- Blog section  -->
+    <section class="mt-8">
+        <div class="bg-green-400 md:px-12 px-6 py-8 rounded-lg">
+            <h2 class="text-2xl font-bold">1. Difference among map, forEach, filter and find :</h2>
+            <div class="md:ml-12 ml-3">
+                <p>All of these methods are called array iteration methods. These are operate on every array item.</p>
+                <article class="my-4">
+                    <h2 class="text-xl font-medium  mb-2">map()</h2>
+                    <p>The map() method creates a new array by performing a function on each array element. It does not
+                        execute the function for array elements without values. This method does not change the original
+                        array. Map like filter & foreach takes a callback and run it against every element on the array
+                        but whats makes it unique is it generate a new array based on your existing array.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">forEach()</h2>
+                    <p>The forEach() method is another form of just a plain for loop that can be used to iterate through
+                        array items. This case of a function is used for more complex arrays, for example, an array of
+                        objects with a lot of entries than just an array of integers.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium text-center mb-2">map() vs forEach()</h2>
+                    <ul class="list-disc md:ml-16 ml-6">
+                        <li>The map() method returns a new array, whereas the forEach() method does not return a new
+                            array.</li>
+                        <li>The map() method is used to transform the elements of an array, whereas the forEach() method
+                            is used to loop through the elements of an array.</li>
+                        <li>The map() method can be used with other array methods, such as the filter() method, whereas
+                            the forEach() method cannot be used with other array methods.</li>
+                    </ul>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">filter()</h2>
+                    <p>Function filter() is a search function that returns all the elements that fulfil the assigned
+                        condition. This function returns an array of found results, if any, even if only 1 match is
+                        found. If a function does not find any match, it simply returns an empty array. </p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">find()</h2>
+                    <p>Function find() is also a search function like the filter() but they differ in one small detail —
+                        this function returns only one match in an array. If in an array is more than one result, the
+                        function will return the first that has matched.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium text-center mb-2">find() vs filter()</h2>
+                    <ul class="list-disc md:ml-16 ml-6">
+                        <li>The find() method return the first element, whereas the filter() return a new array with all
+                            elements that pass a testing function.</li>
+                        <li>If no values satisfy the testing function- find() return undefined whereas filter() return
+                            an empty array.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="bg-indigo-400 md:px-12 px-6 py-8 rounded-lg mt-8">
+            <h2 class="text-2xl font-bold">2. Difference between Local Storage, Session Storage, and Cookies:</h2>
+            <div class="md:ml-12 ml-3">
+                <p> JavaScript provides three mechanisms for storing data on the client - cookies, session storage, and
+                    local storage.</p>
+                <article class="my-4">
+                    <h2 class="text-xl font-medium  mb-2">Local storage</h2>
+                    <p>It is a web storage method that helps us store data on the client's computer in the form of
+                        key/value pairs in a web browser. The data is stored in local storage for a lifetime unless the
+                        user manually deletes it from the browser. It does not expire even when the user closes the
+                        window or tab. Instead, the data remains in the browser until and unless the browser's memory is
+                        cleared.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">Session Storage</h2>
+                    <p>It is very similar to the local storage. Still, the main difference lies in the lifespan as it
+                        persists in the browser until its current tab is on. Once you close the tab or terminate it, the
+                        data on session storage also gets lost.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">Cookies</h2>
+                    <p>Cookies are the oldest and most well-known mechanism. They are simple to use and well supported
+                        by browsers. However, they are limited to 4KB of data and are often used to store data that is
+                        not sensitive, such as user preferences.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2 text-center">Local Storage vs Session Storage vs Cookies</h2>
+                    <table>
+                        <tr>
+                            <th>Local Storage</th>
+                            <th>Session Storage</th>
+                            <th>Cookies</th>
+                        </tr>
+                        <tr>
+                            <td>It allows 10MB of data to be stored.</td>
+                            <td>It allows 5MB of data to be stored.</td>
+                            <td>The storage capacity is limited to 4KB of data.</td>
+                        </tr>
+                        <tr>
+                            <td>The stored data is not deleted when the browser is closed.</td>
+                            <td>The data is stored only for the session and will be deleted when the browser is closed.</td>
+                            <td>The data can be set to expire at a certain time.</td>
+                        </tr>
+                        <tr>
+                            <td>The data is not sent with the request from the client to the server.</td>
+                            <td>The data is not sent with the request from the client to the server</td>
+                            <td>The data is sent with the request from the client to the server</td>
+                        </tr>
+                    </table>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="bg-green-400 md:px-12 px-6 py-8 rounded-lg mt-8">
+            <h2 class="text-2xl font-bold">3. What is event loop and how it's work? </h2>
+            <div class="md:ml-12 ml-3">
+                <article class="my-4">
+                    <h2 class="text-xl font-medium  mb-2">Event loop :</h2>
+                    <p>In JavaScript, the event loop is a fundamental part of the language runtime that manages the asynchronous execution of code. It's responsible for handling the processing of events and the scheduling of tasks in an efficient manner. The event loop works by continuously checking the queue of tasks that need to be executed, prioritizing the ones that are most urgent or have been waiting the longest. It executes each task one at a time, and if a task takes too long to complete, it may pause execution and move on to the next task in the queue.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">How event loop works :</h2>
+                    <p>The Event Loop has one simple job - to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.</p>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="bg-indigo-400 md:px-12 px-6 py-8 rounded-lg mt-8">
+            <h2 class="text-2xl font-bold">4. Explain the given function :   quizTimer, chooseQuiz  </h2>
+            <div class="md:ml-12 ml-3">
+                <article class="my-4">
+                    <h2 class="text-xl font-medium  mb-2">quizTimer() :</h2>
+                    <p>This function is used to create a timer for count the time has passed to submit all the quizes. Besides this function gives alert to charge the color after 60 seconds have passed.</p>
+                </article>
+                <article class="mb-4">
+                    <h2 class="text-xl font-medium mb-2">chooseQuiz() :</h2>
+                    <p>This function is used to set the answer of the given questions. This function takes two parameters one is the index number of the answered question and another is the value of the selected option. The function is checking that whether this question was answered before or not. If the question was answered before, then replace the option with current one. Else just push the question and given answer in the array through spread operator.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
