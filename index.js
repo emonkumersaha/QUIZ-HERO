@@ -193,3 +193,4 @@ document.querySelector("#submit").addEventListener("click", () => {
 document.getElementById('blog-btn').addEventListener('click', function(e){
     window.location.href = './Blogs/blogs.html';
 })
+  
